@@ -39,8 +39,24 @@ pip install -r requirements.txt
 
 3. Download NLTK data (if needed):
 ```python
-python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
+python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab'); nltk.download('stopwords')"
 ```
+
+**Note**: On first run, the system will automatically download:
+- Pre-trained transformer models from HuggingFace (~90MB)
+- 20newsgroups dataset from sklearn (~14MB)
+
+These are cached locally for offline use in subsequent runs.
+
+## 🧪 Testing Without Internet Access
+
+If you don't have internet access or want to test the pipeline quickly, use the test script with sample data:
+
+```bash
+python test_pipeline.py
+```
+
+This uses a built-in sample data generator instead of downloading the real dataset.
 
 ## 🎮 Quick Start
 
